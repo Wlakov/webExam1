@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        TABLE {
+            width: 400px;
+            border-collapse: collapse;
+            empty-cells: hide;
+        }
+        TD, TH {
+            padding: 3px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <td>№ п/п</td>
+        <td>Звання</td>
+        <td>ПІБ</td>
+        <td>ВІК</td>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td>сержант</td>
+        <td>Степанов Степан Степанович</td>
+        <td id="first">33</td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>лейтенант</td>
+        <td>Федоров Федір Федорович</td>
+        <td id="second">25</td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>майор</td>
+        <td>Антоненко Антон Антонович</td>
+        <td id="third">31</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><strong>Середній вік: </strong></td>
+        <td id="result"></td>
+    </tr>
+    </tbody>
+</table>
+<button id="but">Старт</button>
+<script>
+    let f= parseInt(document.getElementById('first').innerText)
+    let s= parseInt(document.getElementById('second').innerText)
+    let t= parseInt(document.getElementById('third').innerText)
+    let r= document.getElementById('result')
+    let sum=(f+s+t)/3
+    document.getElementById("but").addEventListener("click",function (){
+        r.innerText=sum.toString()
+    })
+</script>
+
+</body>
+</html>
